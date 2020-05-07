@@ -1,0 +1,60 @@
+.barcode-scan-button {
+	float: right;
+	position: absolute;
+	top: 13px;
+	right: 10px;
+	font-size: 30px;
+}
+.menu-item:not(1) {
+	cursor: pointer;
+}
+.menu-item *:nth-child(1) {
+	padding-right: 15px;
+}
+.ion-card {
+	cursor: pointer;
+	display: flex;
+	flex-direction: column;
+	width: 70% !important;
+	margin: 30px auto;
+	transition: all 0.2s ease-in-out;
+}
+.ion-card:hover {
+	transform: scaleX(1.05);
+}
+.ion-card img {
+	position: absolute;
+	float: left;
+}
+.ion-card div {
+	margin-left: 110px;
+	overflow-y: hidden;
+}
+.title {
+	text-transform: uppercase;
+	text-align: center;
+	padding-top: 20px;
+}
+.ios ion-title {
+	text-transform: uppercase;
+	text-align: center;
+	padding-top: 5px;
+}
+.ios ion-button {
+	text-transform: uppercase;
+	text-align: center;
+}
+
+@media only screen and (max-width: 500px) {
+	.ion-card {
+		height: 15vh !important;
+	}
+	.ion-card img {
+		width: 30vw !important;
+	}
+	.card-title {
+		font-size: 14px;
+		margin-top: -10px;
+		font-weight: 600;
+	}
+}

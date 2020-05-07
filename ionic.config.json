@@ -1,0 +1,7 @@
+{
+  "name": "mobile-app-one",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}

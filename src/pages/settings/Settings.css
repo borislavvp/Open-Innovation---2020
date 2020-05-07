@@ -1,0 +1,55 @@
+.settingsPageContent h2 {
+	font-weight: 600;
+	margin-left: 30px;
+}
+.settingsPageContent ion-card {
+	width: 700px;
+}
+.settingsPageContent {
+	text-align: center;
+	position: absolute;
+	z-index: 1;
+	margin-left: 200px;
+	opacity: 0.9;
+	width: 700px;
+}
+.supportImg {
+	opacity: 0.3;
+	margin-left: 80px;
+	margin-top: -50px;
+}
+@media only screen and (max-width: 900px) {
+	.settingsPageContent ion-card {
+		width: 100%;
+	}
+	.settingsPageContent {
+		margin-top: -20px;
+		margin-left: 10px;
+		width: 600px;
+	}
+	.settingsPageContent h2 {
+		font-size: 1rem;
+	}
+	.supportImg {
+		margin: 0;
+		height: 300px;
+		width: 600px;
+	}
+}
+@media only screen and (max-width: 700px) {
+	.settingsPageContent {
+		margin-left: -43px;
+		width: 380px;
+	}
+}
+@media only screen and (max-width: 400px) {
+	.settingsPageContent {
+		width: 330px;
+	}
+}
+@media only screen and (max-width: 350px) {
+	.settingsPageContent {
+		width: 290px;
+		margin-left: -50px;
+	}
+}

@@ -1,0 +1,18 @@
+.travelDistance {
+	position: relative;
+	display: inline;
+	right: 40px;
+}
+.travelDistance ul {
+	list-style-type: none;
+	overflow: hidden;
+}
+.travelDistance li {
+	float: left;
+	padding-right: 25px;
+}
+.travelDistance li p {
+	text-align: center;
+	font-size: 0.8rem;
+	font-weight: 600;
+}
