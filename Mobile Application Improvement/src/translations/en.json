@@ -1,0 +1,59 @@
+{
+	"sorting": {
+		"SORT BY": "SORT BY",
+		"Alphabetical": "Alphabetical",
+		"Highest Rated": "Highest Rated",
+		"Closest": "Closest",
+		"Most Expensive": "Most Expensive",
+		"Least Expensive": "Least Expensive"
+	},
+	"filtering": {
+		"FILTER BY": "FILTER BY",
+		"None": "None",
+		"Insurance": "Insurance",
+		"Rating": "Rating > 3",
+		"Pcs": "Pcs",
+		"Mg": "Mg"
+	},
+	"navigation": {
+		"Menu": "Menu",
+		"Pharmacies": "Pharmacies",
+		"Support": "Support",
+		"Settings": "Settings",
+		"Search medicine": "Search medicine...",
+		"Recent searches": "Recent searches",
+		"News": "News"
+	},
+	"days": {
+		"Monday": "Monday",
+		"Tuesday": "Tuesday",
+		"Wednesday": "Wednesday",
+		"Thursday": "Thursday",
+		"Friday": "Friday",
+		"Saturday": "Saturday",
+		"Sunday": "Sunday"
+	},
+	"Hours": "Hours",
+	"No medicine found": "No medicine found",
+	"Available at": "Available at",
+	"pharmacies": "pharmacies",
+	"Opens at": "Opens at",
+	"Closed": "Closed",
+	"Location": "Location",
+	"Language": "Language",
+	"Address": "Address",
+	"City": "City",
+	"Country": "Country",
+	"Insurance provider": "Insurance provider",
+	"Application": "Application",
+	"Category": "Category",
+	"Select One": "Select One",
+	"General question": "General question",
+	"Technical issues": "Technical issues",
+	"Title": "Title",
+	"Content": "Content",
+	"Send question": "Send question",
+	"English": "English",
+	"French": "French",
+	"Cancel": "Cancel"
+}

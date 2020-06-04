@@ -1,0 +1,77 @@
+{
+  "name": "mobile-app-one",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "@capacitor/android": "^1.5.1",
+    "@capacitor/core": "1.5.1",
+    "@ionic-native/barcode-scanner": "^5.22.0",
+    "@ionic-native/core": "^5.22.0",
+    "@ionic/pwa-elements": "^1.5.1",
+    "@ionic/react": "^5.0.0",
+    "@ionic/react-hooks": "0.0.6",
+    "@ionic/react-router": "^5.0.0",
+    "@react-google-maps/api": "^1.8.6",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.4.0",
+    "@testing-library/user-event": "^8.0.3",
+    "@types/jest": "^24.0.25",
+    "@types/node": "^12.12.24",
+    "@types/react": "^16.9.17",
+    "@types/react-dom": "^16.9.4",
+    "@types/react-router": "^5.1.4",
+    "@types/react-router-dom": "^5.1.3",
+    "@types/recompose": "^0.30.7",
+    "axios": "^0.19.2",
+    "easy-peasy": "^3.3.0",
+    "google-map-react": "^1.1.7",
+    "i18next": "^19.3.3",
+    "ionicons": "^5.0.0",
+    "newsapi": "^2.4.0",
+    "phonegap-plugin-barcodescanner": "^8.1.0",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-i18next": "^11.3.4",
+    "react-router": "^5.1.2",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.4.0",
+    "react-swipeable": "^5.5.1",
+    "recompose": "^0.30.0",
+    "typescript": "3.7.4"
+  },
+  "scripts": {
+    "ionic:serve": "npm run css:build && react-scripts start",
+    "ionic:build": "npm run css:build && react-scripts build",
+    "start": "ionic serve",
+    "build": "ionic build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "css:build": "postcss src/theme/tailwind.css -o src/theme/main.css",
+    "translate": "i18next-scanner --config i18next-scanner.config.js"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@capacitor/cli": "1.5.1",
+    "@ionic/cli": "^6.6.0",
+    "@types/google-map-react": "^1.1.5",
+    "@types/google-maps-react": "^2.0.4",
+    "autoprefixer": "^9.7.4",
+    "i18next-scanner": "^2.11.0",
+    "postcss-cli": "^7.1.0",
+    "tailwindcss": "^1.2.0"
+  }
+}
