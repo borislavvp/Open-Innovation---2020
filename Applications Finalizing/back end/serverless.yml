@@ -1,0 +1,35 @@
+app: kigali-medicine-api
+org: stefvdwel
+service: kigali-medicine-api
+
+provider:
+  name: aws
+  timeout: 30
+  region: us-east-1
+  memorySize: 512
+
+plugins:
+  - serverless-apigw-binary
+custom:
+  apigwBinary:
+    types:
+      - '*/*'
+
+package:
+  individually: true
+
+functions:
+  kigali-medicine-api:
+    runtime: java8
+    package:
+      artifact: target/kigali-medicine-api-1.0-SNAPSHOT-runner.jar
+    environment:
+      QUARKUS_DATASOURCE_URL: ${param:sql-host}
+      QUARKUS_DATASOURCE_USERNAME: ${param:sql-username}
+      QUARKUS_DATASOURCE_PASSWORD: ${param:sql-password}
+      TOMTOM_APIKEY: ${param:tomtom-location-apikey}
+    handler: io.quarkus.amazon.lambda.runtime.QuarkusStreamHandler::handleRequest
+    events:
+      - http:
+          path: /{proxy+}
+          method: ANY

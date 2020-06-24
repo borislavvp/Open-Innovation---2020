@@ -1,0 +1,61 @@
+{
+	"sorting": {
+		"SORT BY": "TRIER PAR",
+		"Alphabetical": "Alphabétique",
+		"Highest Rated": "Taux le plus élevé",
+		"Closest": "Le plus proche",
+		"Most Expensive": "Très cher",
+		"Least Expensive": "Le moins cher"
+	},
+	"filtering": {
+		"FILTER BY": "FILTRE PAR",
+		"None": "None",
+		"Insurance": "Assurance",
+		"Rating": "Évaluations > 3",
+		"Pcs": "Pcs",
+		"Mg": "Mg"
+	},
+	"navigation": {
+		"Menu": "Menu",
+		"Pharmacies": "Pharmacies",
+		"Support": "Supporter",
+		"Settings": "Réglages",
+		"Search medicine": "Chercher médecine...",
+		"Recent searches": "Récemment recherché",
+		"News": "Nouvelles"
+	},
+	"days": {
+		"MONDAY": "Lundi",
+		"TUESDAY": "Mardi",
+		"WEDNESDAY": "Mercredi",
+		"THURSDAY": "Jeudi",
+		"FRIDAY": "Vendredi",
+		"SATURDAY": "Samedi",
+		"SUNDAY": "Dimanche"
+	},
+	"Medicine": "Médicament",
+	"Hours": "Heures",
+	"No medicine found": "Aucun médicament trouvé",
+	"Available at": "Disponible dans",
+	"pharmacies": "pharmacies",
+	"Opens at": "Ouvert à",
+	"Closed": "Fermé",
+	"Location": "Emplacement",
+	"Address": "Adresse",
+	"Language": "Langue",
+	"City": "Ville",
+	"Country": "Pays",
+	"Insurance provider": "Fournisseur d'assurance",
+	"Application": "Application",
+	"Category": "Catégorie",
+	"Select One": "Sélectionnez un",
+	"General question": "Question générale",
+	"Technical issues": "Problèmes techniques",
+	"Title": "Titre",
+	"Content": "Contenu",
+	"Send question": "Envoyer une question",
+	"English": "Anglais",
+	"French": "Français",
+	"Cancel": "Annuler",
+	"Temporarily Closed": "Fermé temporairement"
+}

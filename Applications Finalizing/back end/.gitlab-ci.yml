@@ -1,0 +1,94 @@
+stages:
+  - test
+  - build
+  - deploy
+
+test:
+  stage: test
+  image: openjdk:11.0.5-slim
+  script:
+    -  ./mvnw test
+  artifacts:
+    paths:
+      - target
+
+variables:
+  MAVEN_OPTS: "-Dmaven.repo.local=.m2/repository"
+
+cache:
+  paths:
+    - .m2/repository/
+    - /usr/lib/node_modules
+
+build-openapi:
+  image: timbru31/java-node:11
+  stage: build
+  script:
+    - npm install @openapitools/openapi-generator-cli -g
+    - openapi-generator generate -i target/openapi.yaml -g javascript -o target/javascript-sdk --additional-properties=usePromises=true
+    - openapi-generator generate -i target/openapi.yaml -g typescript-fetch -o target/typescript-sdk
+  artifacts:
+    paths:
+      - target/javascript-sdk
+      - target/typescript-sdk
+
+build:
+  stage: build
+  image: openjdk:11.0.5-slim
+  script:
+    - ./mvnw package -DskipTests
+  artifacts:
+    paths:
+      - target
+
+deploy:javascript-sdk:
+  stage: deploy
+  dependencies:
+    - build-openapi
+  before_script:
+    - 'which ssh-agent || ( apt-get update -qy && apt-get install openssh-client -qqy )'
+    - eval `ssh-agent -s`
+    - echo "${SSH_PRIVATE_KEY}" | tr -d '\r' | ssh-add - > /dev/null # add ssh ke
+    - mkdir -p ~/.ssh
+    - chmod 700 ~/.ssh
+    - echo "$SSH_PUBLIC_KEY" >> ~/.ssh/id_rsa.pub
+    - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
+  script:
+    - git config --global user.email "${CI_EMAIL}"
+    - git config --global user.name "${CI_USERNAME}"
+    - git clone git@gitlab.com:kigali-oi-2020/api-sdk.git
+    - (cd api-sdk && git pull origin master --allow-unrelated-histories && git rm -r *)
+    - cp target/javascript-sdk/* api-sdk -r
+    - cd api-sdk
+    - git add .
+    - git commit -m "$CI_COMMIT_MESSAGE" || echo "No changes, nothing to commit!"
+    - git push origin HEAD:master
+  only:
+    refs:
+      - master
+
+deploy:typescript-sdk:
+  stage: deploy
+  dependencies:
+    - build-openapi
+  before_script:
+    - 'which ssh-agent || ( apt-get update -qy && apt-get install openssh-client -qqy )'
+    - eval `ssh-agent -s`
+    - echo "${SSH_PRIVATE_KEY}" | tr -d '\r' | ssh-add - > /dev/null # add ssh ke
+    - mkdir -p ~/.ssh
+    - chmod 700 ~/.ssh
+    - echo "$SSH_PUBLIC_KEY" >> ~/.ssh/id_rsa.pub
+    - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
+  script:
+    - git config --global user.email "${CI_EMAIL}"
+    - git config --global user.name "${CI_USERNAME}"
+    - git clone git@gitlab.com:kigali-oi-2020/typescript-sdk.git
+    - (cd typescript-sdk && git pull origin master --allow-unrelated-histories && git rm -r *)
+    - cp target/typescript-sdk/* typescript-sdk -r
+    - cd typescript-sdk
+    - git add .
+    - git commit -m "$CI_COMMIT_MESSAGE" || echo "No changes, nothing to commit!"
+    - git push origin HEAD:master
+  only:
+    refs:
+      - master

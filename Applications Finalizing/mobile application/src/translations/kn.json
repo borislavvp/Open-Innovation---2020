@@ -1,0 +1,61 @@
+{
+	"sorting": {
+		"SORT BY": "GUTONDEKANYA NA",
+		"Alphabetical": "Inyuguti",
+		"Highest Rated": "Igipimo cyo hejuru",
+		"Closest": "Hafi",
+		"Most Expensive": "Birahenze cyane",
+		"Least Expensive": "Nibura bihenze"
+	},
+	"filtering": {
+		"FILTER BY": "AKAYUNGURUZO NA",
+		"None": "Ntacyo",
+		"Insurance": "Ubwishingizi",
+		"Rating": "Igipimo > 3",
+		"Pcs": "Pcs",
+		"Mg": "Mg"
+	},
+	"navigation": {
+		"Menu": "Ibikubiyemo",
+		"Pharmacies": "Farumasi",
+		"Support": "Inkunga",
+		"Settings": "Igenamiterere",
+		"Search medicine": "Shakisha imiti...",
+		"Recent searches": "Gushakisha vuba aha",
+		"News": "Amakuru"
+	},
+	"days": {
+		"MONDAY": "Ku wa mbere",
+		"TUESDAY": "Ku wa kabiri",
+		"WEDNESDAY": "Ku wa gatatu",
+		"THURSDAY": "Ku wa kane",
+		"FRIDAY": "Ku wa gatanu",
+		"SATURDAY": "Ku wa gatandatu",
+		"SUNDAY": "Ku cyumweru"
+	},
+	"Medicine": "Ubuvuzi",
+	"Hours": "Amasaha",
+	"No medicine found": "Nta muti wabonetse",
+	"Available at": "Bihari kuri",
+	"pharmacies": "farumasi",
+	"Opens at": "Gufungura kuri",
+	"Closed": "Gufunga",
+	"Location": "Aho biherereye",
+	"Address": "Aderesi",
+	"Language": "Ururimi",
+	"City": "Umujyi",
+	"Country": "Igihugu",
+	"Insurance provider": "Utanga ubwishingizi",
+	"Application": "Gusaba",
+	"Category": "Icyiciro",
+	"Select One": "Hitamo Imwe",
+	"General question": "Ikibazo rusange",
+	"Technical issues": "Ibibazo bya tekiniki",
+	"Title": "Umutwe",
+	"Content": "Ibirimo",
+	"Send question": "Ohereza ikibazo",
+	"English": "Icyongereza",
+	"French": "Igifaransa",
+	"Cancel": "Kureka",
+	"Temporarily Closed": "Gufunga by'agateganyo"
+}

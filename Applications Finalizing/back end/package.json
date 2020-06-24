@@ -1,0 +1,9 @@
+{
+  "name": "kigali-medicine-api",
+  "description": "",
+  "version": "0.1.0",
+  "dependencies": {},
+  "devDependencies": {
+    "serverless-apigw-binary": "^0.4.4"
+  }
+}
